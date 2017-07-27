@@ -23,4 +23,14 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div id="main-wrapper">
+  <header>
+    <nav>
+      <ul ic-target="#main-wrapper" ic-push-url="true" ic-select-from-response="#main-wrapper">
+        <li class="active"><a ic-get-from="index.php">Home</a></li>
+        <li><a ic-get-from="about.php">About</a></li>
+        <li><a ic-get-from="contact.php">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="main-wrapper" ic-history-elt="">

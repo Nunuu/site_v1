@@ -63,6 +63,8 @@ gulp.task('coffee', function() {
 
 gulp.task('scripts', function() {
   gulp.src([
+    './src/js/vendor/core/*.js',
+
     './src/js/vendor/greensock/TweenMax.js',
     './src/js/vendor/greensock/easing/EasePack.js',
 
@@ -75,9 +77,9 @@ gulp.task('scripts', function() {
     './src/js/_compiled/main.js',
     './src/js/_compiled/app.js',
   ])
-  .pipe(concat('main.js'))
-  .pipe(gulp.dest('./dist/js/'))
-  .pipe(browserSync.reload({stream:true}));
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('./dist/js/'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('uglify', function() {

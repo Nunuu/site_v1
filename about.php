@@ -1,8 +1,8 @@
 <?php include "header.php"; ?>
 
-<main class="home" role="main">
+<main class="about" role="main">
   
-  Home Page
+  About Me
 
 </main>
 

@@ -393,5 +393,17 @@ template {
 [hidden] {
   display: none; }
 
-main.home {
-  background: red; }
+a {
+  text-decoration: none; }
+
+#main-wrapper.ic-transitioning main {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
+
+#main-wrapper main {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
