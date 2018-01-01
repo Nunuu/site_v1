@@ -1,0 +1,42 @@
+main.temp
+  background: rgba($textColor, 0.5)
+  width: 100%
+  height: 100%
+  +fixed
+  +hvcenter
+  .backgrounds
+    +full
+    z-index: -1
+    opacity: 0.1
+    .background
+      +background
+      +full
+  .content
+    text-align: center
+    h1
+      font-size: 4em
+      text-transform: uppercase
+      color: white
+    ul
+      text-decoration: none
+      margin: 3em 0 0
+      padding: 0
+      li
+        display: inline-block
+        margin-right: 2em
+        text-transform: uppercase
+        font-size: 2em
+        a
+          color: white
+          transition: color 0.3s ease-out
+          &:hover
+            color: rgba(white, 0.8)
+  +mobile
+    .content
+      width: 80%
+      h1
+        font-size: 3em
+      ul
+        li
+          font-size: 1.6em
+          margin-right: 1em

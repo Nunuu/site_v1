@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
 html {
   line-height: 1.15;
   /* 1 */
@@ -393,6 +394,34 @@ template {
 [hidden] {
   display: none; }
 
+::-moz-selection {
+  background-color: #f15a25;
+  color: #fff; }
+
+::selection {
+  background-color: #f15a25;
+  color: #fff; }
+
+::-moz-selection {
+  background-color: #f15a25;
+  color: #fff; }
+
+::-o-selection {
+  background-color: #f15a25;
+  color: #fff; }
+
+::-ms-selection {
+  background-color: #f15a25;
+  color: #fff; }
+
+::-webkit-selection {
+  background-color: #f15a25;
+  color: #fff; }
+
+body {
+  font-size: 10px;
+  font-family: "PT Sans", sans-serif; }
+
 a {
   text-decoration: none; }
 
@@ -407,3 +436,107 @@ a {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s; }
+
+.backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+  .backgrounds .background {
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none; }
+  @media all and (max-width: 500px) {
+    .backgrounds .size-large, .backgrounds .size-medium {
+      background: none !important; }
+    .backgrounds .size-small {
+      display: block; } }
+  @media all and (max-width: 1000px) and (min-width: 501px) {
+    .backgrounds .size-large, .backgrounds .size-small {
+      background: none !important; }
+    .backgrounds .size-medium {
+      display: block; } }
+  @media all and (min-width: 1001px) {
+    .backgrounds .size-small, .backgrounds .size-medium {
+      background: none !important; }
+    .backgrounds .size-large {
+      display: block; } }
+
+main.temp {
+  background: rgba(68, 68, 68, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  main.temp .backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1; }
+    main.temp .backgrounds .background {
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%; }
+  main.temp .content {
+    text-align: center; }
+    main.temp .content h1 {
+      font-size: 4em;
+      text-transform: uppercase;
+      color: white; }
+    main.temp .content ul {
+      text-decoration: none;
+      margin: 3em 0 0;
+      padding: 0; }
+      main.temp .content ul li {
+        display: inline-block;
+        margin-right: 2em;
+        text-transform: uppercase;
+        font-size: 2em; }
+        main.temp .content ul li a {
+          color: white;
+          -webkit-transition: color 0.3s ease-out;
+          -o-transition: color 0.3s ease-out;
+          transition: color 0.3s ease-out; }
+          main.temp .content ul li a:hover {
+            color: rgba(255, 255, 255, 0.8); }
+  @media all and (max-width: 768px) {
+    main.temp .content {
+      width: 80%; }
+      main.temp .content h1 {
+        font-size: 3em; }
+      main.temp .content ul li {
+        font-size: 1.6em;
+        margin-right: 1em; } }

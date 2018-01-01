@@ -23,17 +23,29 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <header>
-    <div class="logo">
-      YH
-    </div>
-    <nav>
-      <ul ic-target="#main-wrapper" ic-push-url="true" ic-select-from-response="#main-wrapper">
-        <li class="active"><a ic-get-from="index.php">Home</a></li>
-        <li><a ic-get-from="about.php">About</a></li>
-        <li><a ic-get-from="contact.php">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<main class="temp" role="main">
+  
+  <div class="backgrounds" role="presentation" aria-hidden="true">
+    <?php 
+    $image_url_large = "/2017/images/bg_large.jpg"; 
+    $image_url_medium = "/2017/images/bg_medium.jpg"; 
+    $image_url_small = "/2017/images/bg_small.jpg"; 
+    ?>
+    <div class="background size-large" style="background-image:url(<?php echo $image_url_large; ?>)"></div>
+    <div class="background size-medium" style="background-image:url(<?php echo $image_url_medium; ?>)"></div>
+    <div class="background size-small" style="background-image:url(<?php echo $image_url_small; ?>)"></div>
+  </div>
+  
+  <div class="content">
+    <h1>Web Site Coming Soon.</h1>
 
-  <div id="main-wrapper" ic-history-elt="">
+    <ul class="contact_methods">
+      <li><a href="mailto:ying@cubedmelons.com">E-mail</a></li>
+      <li><a href="https://www.linkedin.com/in/yinghe/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/Nunuu" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<?php include "footer.php"; ?>
